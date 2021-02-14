@@ -1,0 +1,517 @@
+.body{
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background-color: #000000;
+    background-image: url("img/bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.main__title_hidden,
+.advantages__title_hidden,
+.address__title_hidden,
+.social-media__link_hidden,
+.form__label_hidden{
+    /*display: block;*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button{
+    display: inline-block;
+    margin-right: 17px;
+    padding: 10px 0;
+
+    font: inherit;
+
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+
+    background-color: #000000;
+    border: none;
+}
+
+.button_size_s{
+    width: 140px;
+}
+
+.button:hover,
+.button:focus,
+.button:active{
+    background-color: #242424;
+}
+
+.link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link_underline{
+    text-decoration: underline;
+}
+
+.link:hover,
+.link:focus,
+.link:active{
+    color: #808080;
+}
+
+.list{
+    list-style:none;
+}
+
+.title{
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.header{
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #ffffff;
+
+    background-color: #000000;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+.nav__inner{
+    width: 940px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 620px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__button{
+    display: block;
+    margin:0;
+    padding: 25px 20px;
+}
+
+.nav__login-button{
+    position: relative;
+    margin:0;
+    padding: 25px 20px 25px 50px;
+}
+
+.nav__login-button::before{
+    content: "";
+
+    position: absolute;
+    top: 28px;
+    left: 20px;
+
+    width: 14px;
+    height: 14px;
+
+    background-image: url("img/login-shape.png");
+    background-repeat: no-repeat;
+
+    opacity: 0.3;
+}
+
+.nav__login-button:hover::before,
+.nav__login-button:focus::before,
+.nav__login-button:active::before{
+    opacity: 1;
+}
+
+.body__main{
+    margin-top: 62px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__advantages{
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.advantages__list{
+    display: flex;
+    justify-content: space-between;
+    width: 924px;
+    margin: 0;
+    padding: 0;
+}
+
+.advantages__item{
+    width: 300px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.item-advantages__title{
+    position: relative;
+    margin: 0 0 52px 0;
+}
+
+.item-advantages__title::after{
+    content: "";
+
+    position: absolute;
+    top: 50px;
+    left: 50%;
+
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+
+    background-image: url("img/advantage-shape.png");
+    background-repeat: no-repeat;
+}
+
+.main__inner{
+    color: #000000;
+
+    background-color: #ffffff;
+    background-image:
+            url("img/index-shadow.png"),
+            url("img/inner-bg.png");
+    background-repeat: no-repeat,repeat;
+    background-position: center, 0 0;
+
+    width: 940px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__inner .title{
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.main-inner-news-and-gallery{
+    margin-bottom: 36px;
+}
+
+.main__news,
+.main__contact-info{
+    width: 340px;
+    padding: 50px 70px 50px 80px;
+}
+
+.main__gallery,
+.main__record{
+    width: 300px;
+    padding: 50px 80px 50px 70px;
+}
+
+.news__list{
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+.news__item{
+    margin-bottom: 20px;
+}
+.item-news__text{
+    margin: 0;
+}
+
+.item-news__time{
+    text-transform: none;
+}
+
+.gallery__inner{
+    position: relative;
+
+    height: 260px;
+}
+
+.gallery__item{
+    margin: 0;
+    padding: 0;
+}
+
+.gallery__img{
+    width: 300px;
+    height: 178px;
+}
+
+.gallery__group-button{
+    position: absolute;
+    bottom: 0;
+}
+
+.gallery__button-next{
+    margin: 0;
+}
+
+.contact-info__text{
+    margin: 0 0 20px 0;
+}
+
+.contact-info__group-button{
+    margin-top: 30px;
+}
+
+.record__form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.record__form .form__group{
+    margin-bottom: 10px;
+}
+
+.record__form .form__label{
+    display: block;
+
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.record__form .form__field-text{
+    box-sizing: border-box;
+    width: 140px;
+    margin: 0;
+    padding: 8px 10px 8px 15px;
+
+    font:inherit;
+
+    background-color: transparent;
+    border: 2px solid #000000;
+}
+
+.record__form .form__button{
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+.body__footer{
+    margin-top: 65px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.footer{
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #000000;
+    background-image: url("img/footer-bg.png");
+    background-repeat: repeat;
+}
+
+.footer__inner{
+    width: 940px;
+    display: flex;
+}
+
+.footer__contact{
+    width: 320px;
+    padding: 0;
+    margin: 0 100px 0 0;
+}
+
+.footer__social-media{
+    width: 145px;
+    margin-right: 260px;
+}
+
+.social-media__text{
+    display: block;
+    margin: 0 0 15px 0;
+
+    text-align: center;
+}
+
+.social-media__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 140px;
+}
+
+.social-media__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    margin-bottom: 5px;
+
+    background-color: #000000;
+}
+
+.social-media__link:hover,
+.social-media__link:focus{
+    background-color: #ffffff;
+}
+
+.social-media__link:hover path,
+.social-media__link:focus path{
+    fill: #000000;
+}
+
+.footer__creator{
+    width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.creator__text{
+    display: block;
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+.creator__button{
+    margin: 0;
+}
+
+.creator__button:hover,
+.creator__button:focus{
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+.modal{
+    color: #000000;
+
+    background-color: #ffffff;
+    background-image: url("img/inner-bg.png");
+    background-position: 0 0;
+    background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.7);
+}
+
+.body__login{
+    position: fixed;
+    top: 120px;
+    left: 50%;
+
+    display: none; /**/
+
+    width: 300px;
+    margin-left: -230px;
+    padding: 45px 80px;
+}
+
+.modal__exit-button{
+    position: absolute;
+    top: 10px;
+    right: -33px;
+    width: 17px;
+    height: 17px;
+
+    background-color: transparent;
+    background-image: url("img/exit-button.png");
+    background-repeat: no-repeat;
+    border: none;
+
+    cursor: pointer;
+}
+
+.login__title{
+    margin: 0 0 25px 0;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.login__text{
+    margin: 0 0 20px 0;
+}
+
+.login__form .form__group{
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+.login__form .form__field-text{
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+
+    font:inherit;
+    text-transform: uppercase;
+
+    background-color: transparent;
+    border: 2px solid #000000;
+}
+
+.login__form .form__field-text_icon-user{
+    background-image: url("img/icon-user.png");
+    background-repeat: no-repeat;
+    background-position: 270px center;
+}
+
+.login__form .form__field-text_icon-lock{
+    background-image: url("img/icon-lock.png");
+    background-repeat: no-repeat;
+    background-position: 270px center;
+}
+
+.login__form .login-help{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.login__form .login-help__forget-link{
+    color: #000000;
+}
+
+.login__form .form__button{
+    width: 100%;
+    margin: 0;
+}
+
+.form__field-text:hover,
+.form__field-text:focus{
+    border-color: #663d15;
+}
+
+
+
