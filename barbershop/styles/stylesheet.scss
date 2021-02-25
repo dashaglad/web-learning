@@ -11,7 +11,7 @@
     text-transform: uppercase;
 
     background-color: #000000;
-    background-image: url("img/bg.jpg");
+    background-image: url("../img/bg.jpg");
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -136,7 +136,7 @@
     width: 14px;
     height: 14px;
 
-    background-image: url("img/login-shape.png");
+    background-image: url("../img/login-shape.png");
     background-repeat: no-repeat;
 
     opacity: 0.3;
@@ -193,7 +193,7 @@
     height: 30px;
     margin-left: -15px;
 
-    background-image: url("img/advantage-shape.png");
+    background-image: url("../img/advantage-shape.png");
     background-repeat: no-repeat;
 }
 
@@ -201,8 +201,8 @@
     color: #000000;
 
     background-color: #ffffff;
-    background-image: url("img/index-shadow.png"),
-    url("img/inner-bg.png");
+    background-image: url("../img/index-shadow.png"),
+    url("../img/inner-bg.png");
     background-repeat: no-repeat, repeat;
     background-position: center, 0 0;
 
@@ -331,7 +331,7 @@
     justify-content: center;
 
     background-color: #000000;
-    background-image: url("img/footer-bg.png");
+    background-image: url("../img/footer-bg.png");
     background-repeat: repeat;
 }
 
@@ -416,7 +416,7 @@
     color: #000000;
 
     background-color: #ffffff;
-    background-image: url("img/inner-bg.png");
+    background-image: url("../img/inner-bg.png");
     background-position: 0 0;
     background-repeat: repeat;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
@@ -442,7 +442,7 @@
     height: 17px;
 
     background-color: transparent;
-    background-image: url("img/exit-button.png");
+    background-image: url("../img/exit-button.png");
     background-repeat: no-repeat;
     border: none;
 
@@ -482,12 +482,12 @@
 
     .form__field-text_icon-user {
         @extend %form__field-text_icon;
-        background-image: url("img/icon-user.png");
+        background-image: url("../img/icon-user.png");
     }
 
     .form__field-text_icon-lock {
         @extend %form__field-text_icon;
-        background-image: url("img/icon-lock.png");
+        background-image: url("../img/icon-lock.png");
     }
 
     .login-help {
