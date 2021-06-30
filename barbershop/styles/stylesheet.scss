@@ -91,6 +91,8 @@ body {
 }
 
 .list {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -113,8 +115,6 @@ body {
     &__list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0;
-        padding: 0;
     }
 
     &__button {
@@ -183,7 +183,6 @@ body {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            margin: 0;
             padding: 0;
         }
 
@@ -191,6 +190,9 @@ body {
             min-width: $min-width-content;
             width: 30%;
             text-align: center;
+
+            margin-left: 5px;
+            margin-right: 5px;
         }
     }
 
@@ -217,7 +219,8 @@ body {
     }
 
     &__section {
-        max-width: $max-width-content;
+        position: relative;
+
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 36px;
@@ -225,10 +228,47 @@ body {
         color: #000000;
 
         background-color: #ffffff;
-        background-image: url("../img/index-shadow.png"),
-        url("../img/inner-bg.png");
-        background-repeat: no-repeat, repeat;
-        background-position: center, 0 0;
+        background-image: url("../img/inner-bg.png");
+        background-repeat: repeat;
+        background-position: 0 0;
+
+        &:before{
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+
+            width: 8px;
+            height: 278px;
+
+            background-image: url("../img/index-shadow.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @media(max-width: $max-width-content + 20){
+            max-width: $max-width-content / 2;
+            margin-left: auto;
+            margin-right: auto;
+
+            &:before{
+                content: "";
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%,-50%);
+
+                width: 278px;
+                height: 8px;
+
+                background-image: url("../img/index-shadow-horizont.png");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
 
         .title {
             margin-top: 0;
@@ -240,12 +280,17 @@ body {
     &__gallery,
     &__contact-info,
     &__record {
-        flex-grow: 1;
-
         padding: 50px 70px 50px 80px;
 
         width: 50%;
-        min-width: $min-width-content+50px;
+
+        min-width: 470px;
+
+        @media(max-width: $max-width-content / 2 + 20){
+            width: 100%;
+            min-width: 350px;
+            padding: 50px 10px 50px 20px;
+        }
     }
 
     .news {
@@ -271,7 +316,7 @@ body {
 
     .gallery {
         &__img {
-            width: 100%;  // ?
+            width: 100%;
             height: auto;
 
             margin-bottom: 10px;
@@ -283,7 +328,7 @@ body {
         }
 
         &__button {
-            width: 48%;
+            width: calc(50% - 5px);
 
             margin: 0;
         }
@@ -307,7 +352,7 @@ body {
 
         &__button{
             margin: 0 0 10px 0;
-            width: 48%;
+            width: calc(50% - 5px);
         }
     }
 
@@ -320,7 +365,7 @@ body {
 
         .form {
             &__group {
-                width: 48%;
+                width: calc(50% - 5px);
                 min-width: 140px;
                 margin-bottom: 10px;
             }
@@ -380,8 +425,8 @@ body {
     &__creator {
         width: 30%;
         min-width: $min-width-content;
-        margin: 0 0 20px;
         padding: 0;
+        margin: 0 5px 20px;
     }
 
     .social-media {
@@ -441,10 +486,8 @@ body {
 
                 background-color: #ffffff;
             }
-
         }
     }
-
 }
 
 .body__login {
